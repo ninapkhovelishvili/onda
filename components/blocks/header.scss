@@ -1,0 +1,109 @@
+.header-section{
+    width: 100%;
+    background-color: $purple;
+    position: fixed;
+    z-index: 7;
+
+    .items{
+        width: 100%;
+        @include row();
+        align-items: center;
+
+        @media only screen and (max-width: 768px){
+            @include column();
+         }
+
+        .logo{
+            width: 165px;
+            height: 40px;
+            @include background-contain();
+
+            @media only screen and (max-width: 1024px){
+                width: 100px;
+             }
+        }
+
+        .nav-bar{
+            width: 650px;
+            height: 90px;
+            @include row();
+
+            @media only screen and (max-width: 1024px){
+                width: 600px;
+             }
+
+             @media only screen and (max-width: 768px){
+                 width: 500px;
+             }
+
+             @media only screen and (max-width: 576px){
+                 display: none;
+             }
+
+            .menu{
+                width: 530px;
+                height: 90px;
+                @include row();
+                align-items: center;
+
+                @media only screen and (max-width: 768px){
+                    width: 450px;
+                }
+                
+                ul{
+                    @include default-ul();
+
+                    li{
+                        @include default-li();
+                    }
+                      
+                  }
+
+               
+                a{
+                    font-size: 14px;
+                    font-family: arial; 
+                    color: $white;
+                    text-transform: uppercase;
+                    text-decoration: none;  
+                    transition: 0.5s;
+
+                    @media only screen and (max-width: 768px){
+                        font-size: 12px;
+                    }
+                }
+
+                li:hover a{
+                    color: $pink;
+                }
+            }
+        }
+
+        .search-cart{
+            width: 90px;
+            height: 90px;
+            @include row();
+            align-items: center;
+            margin-left: 10px;
+
+            .icon{
+                width: 45px;
+                height: 90px;
+                color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 13px;
+                transition: 0.5s;
+
+                @media only screen and (max-width: 1024px){
+                    width: 25px;
+                 }
+
+                &:hover{
+                    color: $pink;
+                }
+            }
+        }
+    }
+}

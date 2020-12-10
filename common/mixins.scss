@@ -1,0 +1,71 @@
+@mixin default-h5 {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 100;
+    color: $purple;
+    text-transform: uppercase;
+}
+
+@mixin default-h4 {
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: $white;
+}
+
+@mixin default-h2 {
+    color: $white;
+    font-size: 30px;
+}
+
+@mixin default-h3 {
+    color: $black;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #101010;
+}
+
+@mixin default-p {
+    color: $light-gray;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+@mixin default-ul {
+    width: 660px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin default-li {
+    list-style: none;
+    display: inline;
+    color: $white;
+}
+
+@mixin row {
+    display: flex;
+    justify-content: space-between; 
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin background-contain {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;    
+}
+
+@mixin background-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;  
+}
